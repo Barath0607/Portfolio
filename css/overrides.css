@@ -47,5 +47,12 @@
   #about .logo-track,#about.brands-revealed .logo-track { width: 100% !important; animation: none !important; opacity: 1 !important; transform: none !important; }
 }
 
+/* Seven equal mobile slots prevent the final logos from being clipped. */
+@media (max-width: 760px) {
+  #about .logo-track,#about.brands-revealed .logo-track { width: calc(100vw - 48px) !important; margin: 0 auto; }
+  #about .logo-strip { display: grid !important; grid-template-columns: repeat(7,minmax(0,1fr)); width: 100% !important; gap: 0 !important; }
+  #about .logo-strip img { width: min(100%,40px) !important; height: 44px !important; justify-self: center; }
+}
+
 /* Booking form: high-contrast native picker controls and a compact mobile layout. */
 .booking-form input[type="date"],.booking-form input[type="time"]{color-scheme:dark}.booking-form input[type="date"]::-webkit-calendar-picker-indicator,.booking-form input[type="time"]::-webkit-calendar-picker-indicator{filter:invert(1);opacity:1;cursor:pointer}@media(max-width:500px){.booking-datetime{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px}.booking-dialog.is-success{min-height:390px}.booking-success{min-height:280px;padding:22px 8px}.booking-success h3{font-size:39px}}
