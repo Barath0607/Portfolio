@@ -17,3 +17,5 @@
   .logo-strip img { width: 120px !important; height: 76px !important; }
   .logo-track { animation-duration: 1s !important; }
 }
+
+.booking-form input[type="date"],.booking-form input[type="time"]{color-scheme:dark}.booking-dialog.is-success .booking-form{display:none}.booking-success{display:none;min-height:270px;text-align:center;align-content:center;justify-items:center;padding:25px}.booking-dialog.is-success .booking-success{display:grid}.success-mark{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(244,195,92,.15);border:1px solid var(--gold);color:var(--gold);font-size:30px;margin-bottom:14px}.booking-success h3{font:600 43px/.9 var(--serif);margin:0}.booking-success p{font-size:14px;color:#d3dee0;margin:12px 0 24px}.booking-success .button{border:0;cursor:pointer;min-width:125px}

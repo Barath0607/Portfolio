@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=6">
-  <link rel="stylesheet" href="css/overrides.css?v=6">
+  <link rel="stylesheet" href="css/overrides.css?v=7">
   <style>
     #about .text-link { display: none !important; }
     #about .logo-marquee { display: flex; justify-content: center; padding: 30px clamp(48px, 6vw, 125px) 24px; }
@@ -76,6 +76,11 @@
         <button class="button gold booking-submit" type="submit">Submit Request <span>&rarr;</span></button>
         <p class="form-status" aria-live="polite"></p>
       </form>
+      <div class="booking-success" role="status" aria-live="polite">
+        <span class="success-mark">✓</span><h3>Thank you!</h3>
+        <p>We will connect with you soon.</p>
+        <button class="button gold" type="button" data-booking-close>Close</button>
+      </div>
     </div>
   </div>
   <footer class="footer"><div class="shell footer-inner"><a class="brand" href="#top"><span class="brand-mark">B</span><span class="brand-copy"><b>BARATH</b><small>DIGITAL MARKETER</small></span></a><nav><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a></nav><div class="socials"><a href="#contact">in</a><a href="#contact">◎</a><a href="#contact">◉</a><span>Chennai, India</span></div></div></footer>

@@ -43,6 +43,7 @@ resumeLink?.addEventListener('click', (event) => {
 });
 
 const bookingModal = document.querySelector('.booking-modal');
+const bookingDialog = document.querySelector('.booking-dialog');
 const bookingForm = document.querySelector('.booking-form');
 const bookingStatus = document.querySelector('.form-status');
 const bookingDate = bookingForm?.querySelector('input[type="date"]');
@@ -57,6 +58,7 @@ const openBooking = () => {
 const closeBooking = () => {
   bookingModal?.classList.remove('is-open');
   bookingModal?.setAttribute('aria-hidden', 'true');
+  bookingDialog?.classList.remove('is-success');
   document.body.classList.remove('modal-open');
 };
 
@@ -87,7 +89,8 @@ bookingForm?.addEventListener('submit', async (event) => {
     });
     if (!response.ok) throw new Error('Request failed');
     bookingForm.reset();
-    bookingStatus.textContent = 'Thank you - your request has been sent. I will be in touch soon.';
+    bookingStatus.textContent = '';
+    bookingDialog?.classList.add('is-success');
   } catch {
     bookingStatus.textContent = 'Something went wrong. Please email barath07fidget@gmail.com directly.';
   } finally {
