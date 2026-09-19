@@ -34,10 +34,10 @@
   .hero-art .orbit-b { width: 108vw; left: -4vw; top: -16px; }
 }
 
-/* Mobile brand layout: every logo remains visible in two balanced rows. */
+/* Mobile brand layout: a compact single horizontal row, matching desktop. */
 @media (max-width: 760px) {
   #about .logo-marquee { padding: 22px 24px 30px !important; }
   #about .logo-track { width: 100% !important; }
-  #about .logo-strip { flex-wrap: wrap; justify-content: center; gap: 18px 12px !important; }
-  #about .logo-strip img { width: 64px !important; height: 56px !important; }
+  #about .logo-strip { flex-wrap: nowrap !important; justify-content: space-between; gap: 0 !important; }
+  #about .logo-strip img { flex: 0 0 42px; width: 42px !important; height: 46px !important; }
 }
