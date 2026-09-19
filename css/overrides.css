@@ -1,19 +1,19 @@
-/* Brand marquee correction: one row, native image colours, left-to-right motion. */
-.logo-track {
-  animation: logos-left-to-right 28s linear infinite;
-}
+/* One enlarged horizontal row. The repeated images provide a gap-free loop. */
+.slim-section { padding-top: 64px; padding-bottom: 72px; }
+.logo-marquee { padding: 30px 0 24px; }
+.logo-track { animation: logos-loop 32s linear infinite; }
+.logo-strip { gap: 45px !important; padding-right: 45px !important; }
+.logo-strip img { width: 250px !important; height: 125px !important; filter: none !important; opacity: 1 !important; mix-blend-mode: normal !important; }
 
-.logo-strip img {
-  filter: none !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-}
-
-@keyframes logos-left-to-right {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(100vw); }
+@keyframes logos-loop {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 
 @media (max-width: 760px) {
-  .logo-track { animation-duration: 22s; }
+  .slim-section { padding-top: 48px; padding-bottom: 52px; }
+  .logo-marquee { padding: 20px 0; }
+  .logo-strip { gap: 28px !important; padding-right: 28px !important; }
+  .logo-strip img { width: 175px !important; height: 92px !important; }
+  .logo-track { animation-duration: 24s; }
 }
