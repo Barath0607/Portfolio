@@ -1,0 +1,19 @@
+/* Brand marquee correction: one row, native image colours, left-to-right motion. */
+.logo-track {
+  animation: logos-left-to-right 28s linear infinite;
+}
+
+.logo-strip img {
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+@keyframes logos-left-to-right {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100vw); }
+}
+
+@media (max-width: 760px) {
+  .logo-track { animation-duration: 22s; }
+}
