@@ -41,3 +41,8 @@
   #about .logo-strip { flex-wrap: nowrap !important; justify-content: space-between; gap: 0 !important; }
   #about .logo-strip img { flex: 0 0 42px; width: 42px !important; height: 46px !important; }
 }
+
+/* Keep the compact mobile row centred; entrance animation is desktop-only. */
+@media (max-width: 760px) {
+  #about .logo-track,#about.brands-revealed .logo-track { width: 100% !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+}
