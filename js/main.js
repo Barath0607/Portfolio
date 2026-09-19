@@ -22,6 +22,15 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.service-card, .project-card, .testimonial-grid article, .timeline article').forEach((item) => observer.observe(item));
 
+const brandsSection = document.querySelector('#about');
+const brandsObserver = new IntersectionObserver(([entry], currentObserver) => {
+  if (!entry.isIntersecting) return;
+  brandsSection.classList.add('brands-revealed');
+  currentObserver.unobserve(entry.target);
+}, { threshold: 0.35 });
+
+if (brandsSection) brandsObserver.observe(brandsSection);
+
 const resumeLink = document.querySelector('a[href="assets/BARATH_Resume.pdf"]');
 resumeLink?.addEventListener('click', (event) => {
   event.preventDefault();
