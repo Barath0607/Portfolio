@@ -19,3 +19,17 @@
 }
 
 .booking-form input[type="date"],.booking-form input[type="time"]{color-scheme:dark}.booking-dialog.is-success .booking-form{display:none}.booking-success{display:none;min-height:270px;text-align:center;align-content:center;justify-items:center;padding:25px}.booking-dialog.is-success .booking-success{display:grid}.success-mark{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(244,195,92,.15);border:1px solid var(--gold);color:var(--gold);font-size:30px;margin-bottom:14px}.booking-success h3{font:600 43px/.9 var(--serif);margin:0}.booking-success p{font-size:14px;color:#d3dee0;margin:12px 0 24px}.booking-success .button{border:0;cursor:pointer;min-width:125px}
+
+/* Mobile hero: retain the funnel, remove decorative layers that overlap it. */
+@media (max-width: 760px) {
+  .hero-art { height: 370px !important; margin-top: 26px !important; overflow: hidden; }
+  .hero-art .hand-note,.hero-art .growth-chart { display: none !important; }
+  .hero-art .platform-icons { width: min(310px, calc(100vw - 54px)); left: 50%; top: 18px; transform: translateX(-50%); }
+  .hero-art .platform-icons i:last-child { display: none; }
+  .hero-art .funnel { width: 100%; left: 50%; top: 85px; transform: translateX(-50%); }
+  .hero-art .awareness { width: min(310px, 88vw); }
+  .hero-art .consideration { width: min(240px, 68vw); }
+  .hero-art .conversion { width: min(170px, 48vw); }
+  .hero-art .orbit-a { width: 88vw; left: 6vw; top: 34px; }
+  .hero-art .orbit-b { width: 108vw; left: -4vw; top: -16px; }
+}
