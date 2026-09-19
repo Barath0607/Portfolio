@@ -27,7 +27,7 @@ const brandsObserver = new IntersectionObserver(([entry], currentObserver) => {
   if (!entry.isIntersecting) return;
   brandsSection.classList.add('brands-revealed');
   currentObserver.unobserve(entry.target);
-}, { threshold: 0.35 });
+}, { threshold: 0.08 });
 
 if (brandsSection) brandsObserver.observe(brandsSection);
 
