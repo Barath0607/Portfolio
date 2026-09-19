@@ -33,3 +33,11 @@
   .hero-art .orbit-a { width: 88vw; left: 6vw; top: 34px; }
   .hero-art .orbit-b { width: 108vw; left: -4vw; top: -16px; }
 }
+
+/* Mobile brand layout: every logo remains visible in two balanced rows. */
+@media (max-width: 760px) {
+  #about .logo-marquee { padding: 22px 24px 30px !important; }
+  #about .logo-track { width: 100% !important; }
+  #about .logo-strip { flex-wrap: wrap; justify-content: center; gap: 18px 12px !important; }
+  #about .logo-strip img { width: 64px !important; height: 56px !important; }
+}
